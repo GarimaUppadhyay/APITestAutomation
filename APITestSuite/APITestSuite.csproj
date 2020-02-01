@@ -85,9 +85,7 @@
     <Compile Include="AcceptanceCriteria\CategoryDetailsAcceptance.cs" />
     <Compile Include="Helpers\APIHelper.cs" />
     <Compile Include="Validators\APIValidator.cs" />
-    <Compile Include="ResponseConstructors\CategoryMapping.cs" />
     <Compile Include="Helpers\ConfigurationManagerHelper.cs" />
-    <Compile Include="Tests\RestSharpTests.cs" />
     <Compile Include="Tests\VerifyCategoryDetailsAPITest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
