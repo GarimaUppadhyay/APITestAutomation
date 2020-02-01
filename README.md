@@ -19,12 +19,39 @@ Testing Framework: MS Test
 
 The Solution is divided into four major sections as below:
 ### AcceptanceCriteria ###
-### Helpers ###
-### Validators ###
-### Tests ###
+This namespace contains classes related to acceptance criteria(CategoryDetailsAcceptance) and the locator class for the same( CategoryDetailsLocators).
+The AcceptanceCriteria class takes all the requested criterias and the locator class locates the requested acceptance criteria using JsonPath.
+It defines testdata and locates the elements using JsonPath 
 
+### Helpers ###
+* APIHelper class
+This is a Core Library and Reusable class.
+This is responsible for creatting the request and extracting and processing the response
+
+* ConfiguratorManagerHelper class
+This class reads the keys from appconfig 
+
+### Validators ###
+It validates the Acceptance Criteria given in the acceptance criteria class(es) using locator class(es) in the given API response.
+
+### Tests ###
+This namespace contains actual API tests based on acceptance criteria. It contains a class VerifyCategoryDetailsAPI with following Tests:
+* VerifyCategoryName() - Validating categoryName Property having value Carbon credits.
+* VerifyCategorysCanReListPropertyValue() -Validating CanReList Property is true.
+* VerifyDescriptionForPromotionElementWithNameGallery() - Validating if description associated with Promotion element contains 2x larger image.
+
+## Key Features ##
+* Easy to manage acceptance test criteria
+* Short and crisp test cases
+* Test cases are easy to understand 
+* Can be easily extended further
+* Reusable Components
+* Using JsonPath for validating the Response data, which reduces significant time and complexity in writing the code.
 
 ## Coverage ##
+* Currently supporting simple HTTPClient GET Request and Response
+* Only supporting application/JSON Content-Type
+* Validation of string based elements in the Response.
 
 ## Executing Tests and analysing results ##
 * Clone or copy the solution from the above repo on your machine.
@@ -35,12 +62,5 @@ The Solution is divided into four major sections as below:
 * In test explorer window click on Run all it will run the tests.
 * For viewing the test results click on the test and look for output link to see the details of results/validations.
 
-## Key Features ##
-* Easy to manage acceptance test criteria
-* Short and crisp test cases
-* Test cases are easy to understand 
-* Can be easily extended further
-* Reusable Components
-
 ## Known Issues ##
-Some times MS test soutions doesnot shows up tests or not run, easy workaround is to clean and rebuild the solution. Even if this doesnot work then just update the MSTest.TestFramework and MSTest.TestAdapter package in nuget manager.
+Some times MS test solutions does not shows up tests or not run, easy workaround is to clean and rebuild the solution. Even if this does not work then just update the MSTest.TestFramework and MSTest.TestAdapter package in nuget manager.
