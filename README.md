@@ -5,7 +5,7 @@ Base Project to test API using C# HTTPClient
 * Visual Studio 2015 or higher
 * Windows 10 OS
 
-## Key Libraries used in Project ##
+## Key Libraries used in the Project ##
 ### Core Libraries Used ###
 --------------
 * Microsoft.AspNet.WebApi.Client V5.2.7
@@ -19,7 +19,7 @@ Base Project to test API using C# HTTPClient
 
 The Solution is divided into four major sections as below:
 ### AcceptanceCriteria ###
-This namespace contains classes related to acceptance criteria(CategoryDetailsAcceptance) and the locator class for the same( CategoryDetailsLocators).
+This namespace contains classes related to acceptance criteria class(CategoryDetailsAcceptance) and the locator class( CategoryDetailsLocators).
 The AcceptanceCriteria class takes all the requested criterias and the locator class locates the requested acceptance criteria using JsonPath.
 It defines testdata and locates the elements using JsonPath.
 
